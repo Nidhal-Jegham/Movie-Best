@@ -1,6 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <?php
+session_start();{
+    include("connection.php");
+    include ("functions.php");
+
+};
+if ($_SERVER['REQUEST_METHOD'] == 'POST')
+{
+    //something was posted 
+    $user_name =$_POST['user_name'];
+    $password =$_POST['password'];
+    if ( !empty($user_name) && !empty($password))
+    {
+        //read from the   database
+        $req = "SELECT * FROM the_user where name ='$user_name' LIMIT 1";
+        $res = mysqli_query($conn,$req);
+        if($res)
+        {
+            if ($res && mysqli_num_rows($res) > 0 )
+            {
+                $user_data = mysqli_fetch_assoc($res); 
+                if ($user_data['password'] === $password){
+                    $_SESSION['user_id'] = $user_data['user_id'];
+                    header('location: index.php');
+                    die;
+                }
+                else{
+                    echo "incorrect password";
+                }
+            }
+        }
+        else{
+            echo("user not found ! ");
+        }
+
+
+    }
+
+    
+
+}
+else{
+    echo ("<p>user not registred</p>"); 
+}
+
+?>
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -52,7 +98,7 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="author" content="Dmitry Volkov" />
-    <title>FlixGo – Online Movies, TV Shows & Cinema HTML Template</title>
+    <title>MovieBest – Online Movies, TV Shows & Cinema HTML Template</title>
   </head>
   <body class="body">
     <div class="sign section--bg" data-bg="img/section/section.jpg">
