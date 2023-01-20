@@ -59,7 +59,7 @@ session_start();
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="author" content="Dmitry Volkov" />
-    <title>MovieBest– Online Movies, TV Shows & Cinema HTML Template</title>
+    <title>MovieBest– Online Movies</title>
   </head>
   <body class="body">
     <!-- header -->
@@ -70,7 +70,7 @@ session_start();
             <div class="col-12">
               <div class="header__content">
                 <!-- header logo -->
-                <a href="Home.html" class="header__logo">
+                <a href="Home.php" class="header__logo">
                   <h3>MovieBest</h3>
                 </a>
                 <!-- end header logo -->
@@ -79,7 +79,7 @@ session_start();
                 <ul class="header__nav">
                   <!-- dropdown -->
                   <li class="header__nav-item">
-                    <a href="Home.html" class="header__nav-link">Home</a>
+                    <a href="Home.php" class="header__nav-link">Home</a>
                   </li>
                   <!-- end dropdown -->
 
@@ -112,7 +112,7 @@ session_start();
                 <div class="header__auth">
                  
 
-                  <a href="signin.html" class="header__sign-in">
+                  <a href="signin.php" class="header__sign-in">
                     <i class="icon ion-ios-log-in"></i>
                     <span>sign in</span>
                   </a>
