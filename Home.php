@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+<?php
+session_start();
+
+    include("connection.php");
+    include("functions.php");
+    $user_data = check_login($conn);
+?>
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -52,7 +59,7 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="author" content="Dmitry Volkov" />
-    <title>FlixGo – Online Movies, TV Shows & Cinema HTML Template</title>
+    <title>MovieBest– Online Movies, TV Shows & Cinema HTML Template</title>
   </head>
   <body class="body">
     <!-- header -->
