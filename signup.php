@@ -96,7 +96,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 							
 							<button class="sign__btn" type="button">Sign up</button>
 
-							<span class="sign__text">Already have an account? <a href="signin.html">Sign in!</a></span>
+							<span class="sign__text">Already have an account? <a href="signin.php">Sign in!</a></span>
 						</form>
 						<!-- registration form -->
 					</div>
