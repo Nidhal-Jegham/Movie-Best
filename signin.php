@@ -138,7 +138,7 @@ else{
 
                 <span class="sign__text"
                   >Don't have an account?
-                  <a href="signup.html">Sign up!</a></span
+                  <a href="signup.php">Sign up!</a></span
                 >
               </form>
               <!-- end authorization form -->
